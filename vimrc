@@ -194,7 +194,9 @@
   set display+=lastline
   set wildmenu                                        "show list for autocomplete
   set wildmode=list:full
-  set wildignorecase
+  if exists("&wildignorecase")
+    set wildignorecase
+  endif
 
   set splitbelow
   set splitright
@@ -703,6 +705,10 @@
       let g:goldenview__enable_default_mapping=0
       nmap <F4> <Plug>ToggleGoldenViewAutoResize
     "}}}
+    NeoBundle 'edkolev/tmuxline.vim'
+    NeoBundle 'ekalinin/Dockerfile.vim'
+    NeoBundle 'elixir-lang/vim-elixir'
+    NeoBundle 'rizzatti/dash.vim'
   endif "}}}
   if count(s:settings.plugin_groups, 'windows') "{{{
     NeoBundleLazy 'PProvost/vim-ps1', {'autoload':{'filetypes':['ps1']}} "{{{
@@ -875,6 +881,7 @@
   NeoBundle 'chriskempson/base16-vim'
   NeoBundle 'w0ng/vim-hybrid'
   NeoBundle 'sjl/badwolf'
+  NeoBundle 'tpope/vim-vividchalk'
   NeoBundle 'zeis/vim-kolor' "{{{
     let g:kolor_underlined=1
   "}}}
