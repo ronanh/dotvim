@@ -708,6 +708,7 @@
     NeoBundle 'edkolev/tmuxline.vim'
     NeoBundle 'ekalinin/Dockerfile.vim'
     NeoBundle 'elixir-lang/vim-elixir'
+    NeoBundle 'lambdatoast/elm.vim'
     NeoBundle 'rizzatti/dash.vim'
   endif "}}}
   if count(s:settings.plugin_groups, 'windows') "{{{
